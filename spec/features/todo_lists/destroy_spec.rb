@@ -4,7 +4,7 @@ describe 'Deleting a todo list' do
   let!(:todo_list) { TodoList.create(title: 'Groceries', description: 'Grocery list.') }
 
   it 'is succesful when clicking the destroy link' do
-    visit '/todo_list'
+    visit '/todo_lists'
 
     within "#todo_list_#{todo_list.id}" do
       click_link 'Destroy'
